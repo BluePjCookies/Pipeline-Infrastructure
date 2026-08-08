@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Image Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>AI Image Analyzer</h1>
+        <p>Upload an image and let AI analyze it.</p>
+    </header>
+
+    <main>
+
+        <section class="upload-container">
+
+            <div id="drop-zone" class="drop-zone">
+                <div class="upload-icon">↑</div>
+
+                <h2>Upload an image</h2>
+
+                <p>
+                    Drag and drop an image here
+                    <br>
+                    or
+                </p>
+
+                <label for="image-input" class="upload-button">
+                    Choose Image
+                </label>
+
+                <input
+                    type="file"
+                    id="image-input"
+                    accept="image/png, image/jpeg, image/webp"
+                    hidden
+                >
+
+                <p class="file-info">
+                    PNG, JPG or WEBP
+                </p>
+            </div>
+
+            <!-- Image preview -->
+            <div id="preview-container" class="preview-container hidden">
+                <img id="image-preview" src="" alt="Image preview">
+
+                <button id="remove-button" class="secondary-button">
+                    Remove
+                </button>
+            </div>
+
+
+            <button id="analyze-button" class="analyze-button" disabled>
+                Analyze Image
+            </button>
+
+            <!-- Loading -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Analyzing image...</p>
+            </div>
+
+        </section>
+
+
+        <!-- AI response -->
+        <section id="result-container" class="result-container hidden">
+
+            <h2>Mistakes</h2>
+
+            <div id="result">
+                <!-- AI response will appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©LinusLeong</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
